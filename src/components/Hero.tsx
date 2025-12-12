@@ -54,7 +54,7 @@ const Hero = () => {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center"
+        className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center pt-44 md:pt-0 pb-12 md:pb-0"
         style={{ opacity }}
       >
         <div className="max-w-4xl">
@@ -76,7 +76,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6"
+            className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6"
           >
             <span className="text-foreground">{t("hero.title1")}</span>
             <br />
@@ -126,7 +126,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="absolute bottom-32 left-4 right-4 md:left-auto md:right-8 lg:right-16"
+          className="relative mt-12 md:mt-0 md:absolute md:bottom-32 left-4 right-4 md:left-auto md:right-8 lg:right-16"
         >
           <div className="glass rounded-2xl p-6 md:p-8 max-w-md">
             <div className="grid grid-cols-3 gap-6">
@@ -152,7 +152,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+        className="relative mt-8 w-full flex justify-center md:absolute md:bottom-8 md:left-1/2 md:-translate-x-1/2 z-20"
       >
         <motion.button
           onClick={() => document.querySelector("#company")?.scrollIntoView({ behavior: "smooth" })}
@@ -164,7 +164,7 @@ const Hero = () => {
           <FiChevronDown className="w-5 h-5" />
         </motion.button>
       </motion.div>
-    </section>
+    </section >
   );
 };
 

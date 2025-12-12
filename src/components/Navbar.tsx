@@ -80,10 +80,10 @@ const Navbar = () => {
       />
 
       <div className="relative container mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-48">
+        <div className="flex items-center justify-between h-44 md:h-40 lg:h-48">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <motion.div className="relative h-44" whileHover={{ scale: 1.05 }}>
+            <motion.div className="relative h-36 md:h-36 lg:h-44" whileHover={{ scale: 1.05 }}>
               <img src="/logo.png" alt="Inca Phyto" className="w-auto h-full object-contain" />
             </motion.div>
           </Link>
