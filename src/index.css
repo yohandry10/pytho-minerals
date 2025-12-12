@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Black Gold Mining Theme */
+    --background: 15 10% 5%;
+    --foreground: 45 30% 95%;
+
+    --card: 20 8% 8%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 20 8% 8%;
+    --popover-foreground: 45 30% 95%;
+
+    /* Gold primary */
+    --primary: 43 74% 49%;
+    --primary-foreground: 15 10% 5%;
+
+    /* Dark charcoal secondary */
+    --secondary: 20 5% 12%;
+    --secondary-foreground: 45 30% 90%;
+
+    --muted: 20 5% 15%;
+    --muted-foreground: 45 10% 60%;
+
+    /* Warm amber accent */
+    --accent: 38 92% 50%;
+    --accent-foreground: 15 10% 5%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 45 30% 95%;
+
+    --border: 40 20% 20%;
+    --input: 20 10% 15%;
+    --ring: 43 74% 49%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --gold: 43 74% 49%;
+    --gold-light: 45 80% 60%;
+    --gold-dark: 38 70% 35%;
+    --charcoal: 20 8% 8%;
+    --charcoal-light: 20 5% 15%;
+    --onyx: 15 10% 5%;
+    --steel: 220 10% 40%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(38 92% 50%) 50%, hsl(45 80% 60%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(15 10% 5%) 0%, hsl(20 8% 8%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(15 10% 3%) 0%, hsl(20 8% 10%) 50%, hsl(25 10% 8%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+
+    /* Shadows */
+    --shadow-gold: 0 0 60px hsl(43 74% 49% / 0.3);
+    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(43 74% 49% / 0.2);
+
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 20 8% 8%;
+    --sidebar-foreground: 45 30% 95%;
+    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary-foreground: 15 10% 5%;
+    --sidebar-accent: 20 5% 15%;
+    --sidebar-accent-foreground: 45 30% 95%;
+    --sidebar-border: 40 20% 20%;
+    --sidebar-ring: 43 74% 49%;
+  }
+
+  .dark {
+    --background: 15 10% 5%;
+    --foreground: 45 30% 95%;
+    --card: 20 8% 8%;
+    --card-foreground: 45 30% 95%;
+    --popover: 20 8% 8%;
+    --popover-foreground: 45 30% 95%;
+    --primary: 43 74% 49%;
+    --primary-foreground: 15 10% 5%;
+    --secondary: 20 5% 12%;
+    --secondary-foreground: 45 30% 90%;
+    --muted: 20 5% 15%;
+    --muted-foreground: 45 10% 60%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 15 10% 5%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 45 30% 95%;
+    --border: 40 20% 20%;
+    --input: 20 10% 15%;
+    --ring: 43 74% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  /* Glassmorphism */
+  .glass {
+    @apply backdrop-blur-xl bg-card/30 border border-border/30;
+  }
+
+  .glass-heavy {
+    @apply backdrop-blur-2xl bg-card/50 border border-border/50;
+  }
+
+  /* Gold text gradient */
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Hover effects */
+  .hover-glow {
+    @apply transition-all duration-500;
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-2;
+  }
+
+  /* Card styles */
+  .card-modern {
+    @apply glass rounded-2xl p-6 hover-lift hover-glow;
+  }
+
+  /* Button styles */
+  .btn-gold {
+    background: var(--gradient-gold);
+    @apply text-background font-semibold px-8 py-4 rounded-xl transition-all duration-300;
+  }
+
+  .btn-gold:hover {
+    @apply scale-105;
+    box-shadow: var(--shadow-gold);
+  }
+
+  .btn-outline-gold {
+    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-xl transition-all duration-300;
+  }
+
+  .btn-outline-gold:hover {
+    @apply bg-primary text-background;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40 px-4 md:px-8;
+  }
+
+  /* Parallax background */
+  .parallax-bg {
+    @apply bg-scroll md:bg-fixed bg-cover bg-center;
+  }
+
+  /* Animated underline */
+  .animated-underline {
+    @apply relative;
+  }
+
+  .animated-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .animated-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 0 40px hsl(43 74% 49% / 0.5);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
+/* Preloader animation */
+@keyframes pulse-gold {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(43 74% 49% / 0.1) 0%,
+    hsl(43 74% 49% / 0.3) 50%,
+    hsl(43 74% 49% / 0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
