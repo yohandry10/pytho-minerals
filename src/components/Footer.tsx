@@ -85,7 +85,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:col-span-2"
             >
-              <div className="glass rounded-3xl p-8 h-full">
+              <div className="glass rounded-3xl p-6 md:p-8 h-full">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-6">
                   {t("footer.contact")}
                 </h3>
@@ -144,7 +144,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="lg:col-span-2"
             >
-              <div className="glass rounded-3xl p-8 h-full">
+              <div className="glass rounded-3xl p-6 md:p-8 h-full">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">
                   {t("footer.newsletter")}
                 </h3>
@@ -152,20 +152,20 @@ const Footer = () => {
                   {t("footer.newsletter.desc")}
                 </p>
 
-                <form onSubmit={handleSubmit} className="flex gap-3">
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
-                    className="flex-1 px-4 py-3 rounded-xl bg-muted/30 border border-border/30 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                    className="flex-1 px-4 py-3 rounded-xl bg-muted/30 border border-border/30 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors w-full"
                   />
                   <button
                     type="submit"
-                    className="px-6 py-3 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors flex items-center gap-2"
+                    className="px-6 py-3 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"
                   >
                     <FiSend className="w-4 h-4" />
-                    <span className="hidden sm:inline">{t("footer.subscribe")}</span>
+                    <span>{t("footer.subscribe")}</span>
                   </button>
                 </form>
 
