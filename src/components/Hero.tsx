@@ -54,7 +54,7 @@ const Hero = () => {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center pt-44 md:pt-0 pb-12 md:pb-0"
+        className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center pt-52 md:pt-0 pb-12 md:pb-0"
         style={{ opacity }}
       >
         <div className="max-w-4xl">
