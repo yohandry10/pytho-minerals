@@ -49,6 +49,15 @@ const Products = () => {
       image: "/plomo.webp",
       accent: "from-accent/30 to-transparent",
     },
+    {
+      id: "antimony",
+      name: t("products.antimony"),
+      tagline: t("products.antimony.tag"),
+      description: t("products.antimony.desc"),
+      features: [t("products.feature1"), t("products.feature6"), t("products.feature7"), t("products.feature12")],
+      image: "/antomonio.jpg",
+      accent: "from-primary/20 to-accent/30",
+    },
     // Granulometrías de Antracita
     {
       id: "anthracite-size1",
