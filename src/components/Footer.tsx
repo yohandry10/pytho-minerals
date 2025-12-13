@@ -111,10 +111,10 @@ const Footer = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">{t("footer.phone")}</h4>
                       <a
-                        href="tel:+51931108139"
+                        href="tel:+51906379468"
                         className="text-muted-foreground hover:text-primary transition-colors text-sm"
                       >
-                        +(51) 93 11 08 139
+                        +51 906 379 468
                       </a>
                     </div>
                   </div>
@@ -125,12 +125,26 @@ const Footer = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">{t("footer.email")}</h4>
-                      <a
-                        href="mailto:venta@incaphytogreen.com"
-                        className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                      >
-                        venta@incaphytogreen.com
-                      </a>
+                      <div className="space-y-1">
+                        <a
+                          href="mailto:sales@incaphytominerals.com"
+                          className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                        >
+                          sales@incaphytominerals.com
+                        </a>
+                        <a
+                          href="mailto:jvc@incaphytominerals.com"
+                          className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                        >
+                          jvc@incaphytominerals.com
+                        </a>
+                        <a
+                          href="mailto:financial@incaphytominerals.com"
+                          className="text-muted-foreground hover:text-primary transition-colors text-sm block"
+                        >
+                          financial@incaphytominerals.com
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
